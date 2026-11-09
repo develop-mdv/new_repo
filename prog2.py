@@ -1,4 +1,7 @@
-﻿n = input() 
+﻿try:
+    n = input()
+except EOFError:
+    n = ""
+
 print("Length:", len(n))
 print("New information 2")
-# Additional work while changes are stashed
