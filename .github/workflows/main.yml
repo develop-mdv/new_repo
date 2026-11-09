@@ -38,3 +38,13 @@ jobs:
 
       - name: Run integration tests
         run: python -m unittest discover -s tests -v
+      - name: Generate documentation
+        run: python build_docs.py
+
+      - name: Upload documentation
+        uses: actions/upload-artifact@v7
+        with:
+          name: project-documentation-${{ github.sha }}
+          path: docs/index.html
+          if-no-files-found: error
+          retention-days: 30
