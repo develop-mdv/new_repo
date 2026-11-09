@@ -112,6 +112,20 @@ Workflow находится в .github/workflows/main.yml.
 
 \- dev1, dev2, dev3 — учебные ветки участников.
 
+## Генерация документации
+
+Локальная сборка:
+
+```bash
+python build_docs.py
+```
+
+Результат находится в docs/index.html.
+
+CI автоматически собирает документацию при каждом push
+и обновлении Pull Request. HTML доступен для скачивания
+в разделе Artifacts соответствующего запуска GitHub Actions.
+
 
 
 Версия указана в VERSION, изменения — в CHANGELOG.md.
