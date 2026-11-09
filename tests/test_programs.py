@@ -54,6 +54,12 @@ class ProgramTests(unittest.TestCase):
             ["Hello, World!"],
         )
 
+    def test_prog2_no_input(self):
+        self.assertEqual(
+            self.run_program("prog2.py", ""),
+            ["Length: 0", "New information 2"],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
