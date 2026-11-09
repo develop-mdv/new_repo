@@ -35,3 +35,6 @@ jobs:
 
       - name: Run prog3
         run: python prog3.py
+
+      - name: Run integration tests
+        run: python -m unittest discover -s tests -v
